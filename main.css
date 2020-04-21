@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#barra {
+    height:150px;
+    background-color: #081c24;
+}
+input {
+    margin-left: 20px;
+}
+h1 {
+    color:grey;
+    font-size: 45px;
+    margin-left: 20px;
+}
+.container {
+    height:90vh;
+    width: 100vw;
+    background-color: #9cabb0;
+}
