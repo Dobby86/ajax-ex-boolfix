@@ -4,9 +4,14 @@
     box-sizing: border-box;
 }
 
+header {
+    position: fixed;
+}
 #barra {
+    width: 100vw;
     height:150px;
     background-color: #081c24;
+    margin-top: -150px;
 }
 input {
     margin-left: 20px;
@@ -16,8 +21,9 @@ h1 {
     font-size: 45px;
     margin-left: 20px;
 }
-.container {
-    height:90vh;
+.film-container {
+    min-height:100vh;
     width: 100vw;
     background-color: #9cabb0;
+    margin-top: 150px;
 }

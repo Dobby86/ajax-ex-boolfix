@@ -7,9 +7,10 @@
 // Voto
 $(document).ready(function() {
 // al click
+
 $("button").click(function() {
 
-    $(".container").html("");     
+    $(".container").html(" ");
     var variabileRicerca = $("#scrivi").val();
 
 
