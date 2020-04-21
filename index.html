@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="main.css">
 
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
+        <link rel="stylesheet" href="main.css">
         <title>boolfix</title>
     </head>
     <body>
@@ -24,10 +24,25 @@
         <div class="container">
             <div class="lista film">
 
-
             </div>
 
         </div>
+        <!--  -->
+
+        <div class="film-container container">
+
+        </div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <div class="film">
+
+            <h2>{{title}}</h2>
+            <h3>{{subtitle}}</h3>
+            <h4>{{language}}</h4>
+            <h5>{{vote}}</h5>
+
+        </div>
+      </script>
         <script type="text/javascript" src="my.js">
 
         </script>

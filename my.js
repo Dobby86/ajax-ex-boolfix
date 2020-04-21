@@ -5,67 +5,55 @@
 // Titolo Originale
 // Lingua
 // Voto
-// $(document).ready(function(){
-//
-//   var casa=$("#scrivi").val();
-//
-//
-//   $.ajax({
-//               url: "https://api.themoviedb.org/3/search/movie?",
-//               method: "GET",
-//               dataType: "json",
-//               data: {
-//                   api_key: "aecc5cd7bf4a2c1736a6c6b92e0a3b8b",
-//                   language: "it-IT",
-//                   query: "casa",
-//               },
-//               success: function (data) {
-//                 console.log(data)
-//
-//
-//
-//
-//
-//               },
-//               error: function(richiesta, stato, errori){
-//               }
-//           });
-//
-//
-
 $(document).ready(function() {
+// al click
+$("button").click(function() {
 
-var variabileRicerca = $("#scrivi").val();
+    $(".container").html("");     
+    var variabileRicerca = $("#scrivi").val();
+
 
 $.ajax({
-    url: "https://api.themoviedb.org/3/movie/550?",
+
+    url: "https://api.themoviedb.org/3/search/movie",
     method: "GET",
     dataType: "json",
     data: {
         api_key: "76dafb6359bcac21006df98494394fce",
         language: "it-IT",
-        query: "variabileRicerca",
+        query: variabileRicerca,
     },
-    success : function(data) {
-        var prova = data.response;
-            console.log();
+    // handlebars
+    success : function (data) {
+
+        console.log(data);
+
+    var source = $("#entry-template").html();
+     var template = Handlebars.compile(source);
+
+        var listaFilm = data.results;
+
+        for (var i = 0; i < listaFilm.length; i++) {
+            var listaCorrente = listaFilm [i];
+
+            var context = {
+
+                title : listaCorrente.title,
+                subtitle : listaCorrente.original_title,
+                language :listaCorrente.original_language,
+                voto : listaCorrente.vote_count
+
+            };
+            var risultatoDaAggiungere = template(context);
+            $(".film-container").append(risultatoDaAggiungere);
+            console.log(risultatoDaAggiungere);
+        }
+
     },
-    error: function(richiesta, stato, errori){
+      error: function(richiesta, stato, errori){
     }
 
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 });
