@@ -63,13 +63,19 @@ $.ajax({
              else {
                 valoreProprietàLinguaggio = originalLanFilm;
             }
+            // partefilm
+            var voto = listaCorrente.vote_average;
+            var votoCorretto = Math.ceil(voto / 2);
+
 
             var context = {
 
                 title : listaCorrente.title,
                 subtitle : listaCorrente.original_title,
                 language : listaCorrente.original_language,
-                vote : listaCorrente.vote_average
+                
+                stelline : generaStelle(votoCorretto),
+                voto : votoCorretto
 
             };
 
@@ -136,15 +142,16 @@ $.ajax({
              else {
                 valoreProprietàLinguaggio = originalLan;
             }
+            var voto = listaCorrenteSerie.vote_average;
+            var votoCorretto = Math.ceil(voto / 2);
 
             var context = {
 
                 title : listaCorrenteSerie.name,
                 subtitle : listaCorrenteSerie.original_name,
                 language : valoreProprietàLinguaggio,
-                vote : listaCorrenteSerie.vote_count,
-
-                // stelline : generaStelle(votoCorretto)
+                stelline : generaStelle(votoCorretto),
+                voto : votoCorretto
 
             };
 
