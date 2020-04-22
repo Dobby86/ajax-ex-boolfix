@@ -23,7 +23,7 @@ h1 {
 }
 .film-container {
     min-height:100vh;
-    width: 100vw;
+    width: auto;
     background-color: #9cabb0;
     margin-top: 150px;
 }
@@ -33,8 +33,15 @@ h1 {
 }
 .film {
     margin-bottom: 50px;
-    
-
+    background-color: darkorange;
+    height:auto;
+    width: 200px;
+}
+h3 {
+    font-size: 30px;
+}
+#ot {
+    font-size: 30px;
 }
 .film span {
     display: block;
