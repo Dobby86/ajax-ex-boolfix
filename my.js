@@ -39,46 +39,50 @@ $.ajax({
 
 
         for (var i = 0; i < listaFilm.length; i++) {
-            // lingue
-            var ita = '<img src = "img/it.png" alt="">';
-            var en = '<img src = "img/gb.png" alt="">';
-            var es = '<img src = "img/es.png" alt="">';
 
             var listaCorrente = listaFilm [i];
             //parte simile
-            var originalLanFilm = listaCorrente.original_language;
+            var originalLan = listaCorrente.original_language;
 
             var valoreProprietàLinguaggio = "";
 
-            console.log(originalLanFilm);
+            console.log(originalLan);
 
             // come lo valorizzo?
-            if (originalLanFilm == "en") {
-                valoreProprietàLinguaggio = '<img src = "img/gb.png" alt="">';
-            }else if (originalLanFilm == "it"){
-                valoreProprietàLinguaggio = '<img src = "img/it.png" alt="">';
-            }else if (originalLanFilm == "es"){
-                valoreProprietàLinguaggio = '<img src = "img/es.png" alt="">';
+            if (originalLan == "en") {
+                valoreProprietàLinguaggio = '<img src = "img/gb.png" >';
+
+            }else if (originalLan == "it"){
+                valoreProprietàLinguaggio = '<img src = "img/it.png" >';
+
+            }else if (originalLan == "es"){
+                valoreProprietàLinguaggio = '<img src = "img/es.png" >';
+
+            }else if (originalLan == "de"){
+                valoreProprietàLinguaggio = '<img src = "img/de.png" >';
+            }else if (originalLan == "fr"){
+                valoreProprietàLinguaggio = '<img src = "img/fr.png" >';
+            }else if (originalLan == "ja"){
+                valoreProprietàLinguaggio = '<img src = "img/jp.png" >';
+            }else if (originalLan == "sv"){
+                valoreProprietàLinguaggio = '<img src = "img/se.png" >';
             }
              else {
-                valoreProprietàLinguaggio = originalLanFilm;
+                valoreProprietàLinguaggio = originalLan;
             }
             // partefilm
             var voto = listaCorrente.vote_average;
             var votoCorretto = Math.ceil(voto / 2);
 
-
             var context = {
 
                 title : listaCorrente.title,
                 subtitle : listaCorrente.original_title,
-                language : listaCorrente.original_language,
-                
+                language :valoreProprietàLinguaggio,
                 stelline : generaStelle(votoCorretto),
                 voto : votoCorretto
 
             };
-
             var risultatoDaAggiungere = template(context);
             $(".film-container").append(risultatoDaAggiungere);
             // console.log(risultatoDaAggiungere);
@@ -88,7 +92,6 @@ $.ajax({
 
       error: function(richiesta, stato, errori){
     },
-
 
 });
 // serie tv...................
@@ -111,15 +114,8 @@ $.ajax({
     var template = Handlebars.compile(source);
 
     var listaSerie = data.results;
-// testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-
-
 
         for (var i = 0 ;  i < listaSerie.length; i++) {
-            // lingue
-            var italiano = '<img src = "img/it.png" alt="">';
-            var inglese = '<img src = "img/gb.png" alt="">';
-            var spagnolo = '<img src = "img/es.png" alt="">';
 
             var listaCorrenteSerie = listaSerie [i];
 
@@ -133,11 +129,19 @@ $.ajax({
 
             // come lo valorizzo?
             if (originalLan == "en") {
-                valoreProprietàLinguaggio = '<img src = "img/gb.png" alt="">';
+                valoreProprietàLinguaggio = '<img src = "img/gb.png">';
             }else if (originalLan == "it"){
-                valoreProprietàLinguaggio = '<img src = "img/it.png" alt="">';
+                valoreProprietàLinguaggio = '<img src = "img/it.png" >';
             }else if (originalLan == "es"){
-                valoreProprietàLinguaggio = '<img src = "img/es.png" alt="">';
+                valoreProprietàLinguaggio = '<img src = "img/es.png" >';
+            }else if (originalLan == "de"){
+                valoreProprietàLinguaggio = '<img src = "img/de.png" >';
+            }else if (originalLan == "fr"){
+                valoreProprietàLinguaggio = '<img src = "img/fr.png" >';
+            }else if (originalLan == "ja"){
+                valoreProprietàLinguaggio = '<img src = "img/jp.png" >';
+            }else if (originalLan == "sv"){
+                valoreProprietàLinguaggio = '<img src = "img/se.png" >';
             }
              else {
                 valoreProprietàLinguaggio = originalLan;
@@ -167,7 +171,6 @@ $.ajax({
       error : function(richiesta, stato, errori){
     },
 
-
 });
 
 
@@ -183,7 +186,6 @@ function generaStelle (voto){
 
         stelleTot += '<i class="fas fa-star"></i>';
     }
-
     for (var i = 0 ; i < 5 - voto ;  i++ ) {
         stelleTot += '<i class="far fa-star"></i>';
     }
