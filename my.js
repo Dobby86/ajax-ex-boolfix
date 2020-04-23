@@ -74,12 +74,17 @@ $.ajax({
             // partefilm
             var voto = listaCorrente.vote_average;
             var votoCorretto = Math.ceil(voto / 2);
+            // copertine
+            var sito = "https://image.tmdb.org/t/p/";
+            var size = "w185";
+            var coverFilm = sito + size + listaCorrente.backdrop_path ;
 
             var context = {
 
                 title : listaCorrente.title,
                 subtitle : listaCorrente.original_title,
                 language :valoreProprietàLinguaggio,
+                cover : coverFilm,
                 stelline : generaStelle(votoCorretto),
                 tipoRichiesta : "Film"
                 // voto : votoCorretto
@@ -92,6 +97,7 @@ $.ajax({
     },
 
       error: function(richiesta, stato, errori){
+          alert("errore");
     },
 
 });
@@ -150,7 +156,23 @@ $.ajax({
 
             var voto = listaCorrenteSerie.vote_average;
             var votoCorretto = Math.ceil(voto / 2);
+            // copertine serie
+            var sito = "https://image.tmdb.org/t/p/";
+            var size = "w185";
+            var coverSerie = sito + size + listaCorrenteSerie.poster_path ;
 
+            // test
+
+            // parte immagini
+
+            var imgRotta = sito + size + "/images/img/errore-404.gif";
+            var verificare = listaCorrenteSerie.poster_path;
+
+                 if (verificare == null) {
+                     generator = imgRotta ;
+                 } else {
+                     generator = coverSerie;
+                 }
 
             var context = {
 
@@ -158,9 +180,10 @@ $.ajax({
                 subtitle : listaCorrenteSerie.original_name,
                 language : valoreProprietàLinguaggio,
                 stelline : generaStelle(votoCorretto),
+                cover : generator,
+                // cover : imgSiOno(coverSerie),
                 tipoRichiesta : "Tv Series"
                 // voto : votoCorretto
-
             };
 
             var risultatoDaAggiungere = template(context);
@@ -172,7 +195,9 @@ $.ajax({
 // fine faseprima
     },
 
+
       error : function(richiesta, stato, errori){
+           alert("errore");
     },
 
 });
@@ -195,3 +220,18 @@ function generaStelle (voto){
     }
     return stelleTot;
 }
+// parte img
+// function imgSiOno(coverSerie) {
+//
+//     var imgRotta ='<img src = "img/notfound.jpg" >';
+//     imgRotta = false;
+//     var nonTrovata = "null";
+//     var verificare = listaCorrenteSerie.backdrop_path;
+//
+//     if (verificare == nonTrovata){
+//          coverSerie = imgRotta;
+//
+//     }else {
+//          coverSerie = true;
+//     }
+// }

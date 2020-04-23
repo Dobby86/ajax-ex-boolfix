@@ -32,15 +32,16 @@ h1 {
     flex-wrap: wrap;
 }
 .copertina {
-    height:50px;
-    width: 100%;
+    height:200px;
+    max-width: 100%;
+    padding: 20px;
 }
 .film {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 10px;
     background-color:rgb(0, 102, 153);
-    min-height:340px;
+    min-height:500px;
     width: 300px;
     border-radius: 10px;
 
