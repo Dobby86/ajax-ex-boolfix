@@ -223,10 +223,10 @@ function generaStelle (voto){
 
     for (var i = 0; i < voto; i++){
 
-        stelleTot += '<i class="fas fa-star"></i>';
+        stelleTot += '<i id="gold" class="fas fa-star"></i>';
     }
     for (var i = 0 ; i < 5 - voto ;  i++ ) {
-        stelleTot += '<i class="far fa-star"></i>';
+        stelleTot += '<i id="yellow" class="far fa-star"></i>';
     }
     return stelleTot;
 }
