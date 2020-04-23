@@ -111,7 +111,7 @@ $.ajax({
     },
 
 });
-// serie tv...................
+// serie tv........................................................................................................
 $.ajax({
 
     url: "https://api.themoviedb.org/3/search/tv",
@@ -198,7 +198,7 @@ $.ajax({
 
             var risultatoDaAggiungere = template(context);
 
-            $(".film-container").append(risultatoDaAggiungere);
+            $(".serie-container").append(risultatoDaAggiungere);
             // console.log(risultatoDaAggiungere);
         }
     // }

@@ -13,21 +13,43 @@
     <body>
         <header>
             <nav id="barra"  class="navbar navbar-default navbar-fixed-top">
+
                 <h1>Boolfix</h1>
 
-                 <div class="motorediricerca">
-                     <input id="scrivi" type="text" placeholder="search..." name="" value="">
+                     <div class="motorediricerca">
+                             <input id="scrivi" type="text" placeholder="search..." name="" value="">
 
-                 <button id="cerca"type="button" name="button">GO!</button>
+                         <button id="cerca"type="button" name="button">GO!</button>
+                         <div class="separee">
 
-                </div>
+
+                                 <div class="sx">
+                                          <h2 class="cat">Film:</h2>
+                                 </div>
+
+                                 <div class="dx">
+                                      <h2 class="cat">Serie Tv:</h2>
+                                 </div>
+                          </div>
+
+
+                    </div>
             </nav>
         </header>
 
         <!--  -->
+        <div class="tutto">
 
-        <div class="film-container container">
 
+
+                <div class="film-container container">
+
+
+                </div>
+                <div class="serie-container container">
+
+
+                </div>
         </div>
 
 
@@ -35,20 +57,20 @@
 
         <div class="film" >
 
-            <img class="copertina" src= "{{{cover}}}" >
+                    <img class="copertina" src= "{{{cover}}}" >
 
-            <h2 id="titolo">Title :{{title}} </h2>
-            <span id="ot">Original title :{{subtitle}}</span>
-            <span id="lang"><b >Language :</b> {{{language}}}</span>
-            <!-- <h4>Vote : {{voto}}</h4> -->
-            <h4 id="gen">Genre : {{tipoRichiesta}}</h4>
-            <h5>{{{stelline}}}</h5>
+                    <h2 id="titolo">Title :{{title}} </h2>
+                    <span id="ot">Original title :{{subtitle}}</span>
+                    <span id="lang"><b >Language :</b> {{{language}}}</span>
+                    <!-- <h4>Vote : {{voto}}</h4> -->
+                    <h4 id="gen">Genre : {{tipoRichiesta}}</h4>
+                    <h5>{{{stelline}}}</h5>
 
         </div>
       </script>
-        <script type="text/javascript" src="my.js">
+            <script type="text/javascript" src="my.js">
 
-        </script>
+            </script>
 
     </body>
 </html>
