@@ -26,9 +26,8 @@ header {
 #barra {
     width: 100vw;
     height:150px;
-    background-color: rgb(22,23,37);
+    background-color: rgb(23,26,33);
     margin-top: -150px;
-    border-bottom: 1px solid #990000;
 
 }
 input {
@@ -62,7 +61,7 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     float: left;
-    overflow-y: scroll;
+    overflow-y: scroll ;
 }
 .serie-container {
     height:100vh ;
@@ -90,9 +89,10 @@ h1 {
 .film {
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 10px;
-    background-color: rgb(22,23,37);
-    min-height:550px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(36,42,54);
+    min-height: 550px;
     width: 300px;
     border-radius: 10px;
     display: flex;
@@ -100,9 +100,7 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    border: 1px solid #4d0000;
-
-
+    border: 2px solid #330000;
 }
 h3 {
     font-size: 20px;
