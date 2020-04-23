@@ -22,27 +22,50 @@ h1 {
     margin-left: 20px;
 }
 .film-container {
-    min-height:100vh;
+    min-height:100vh ;
     width: auto;
     background-color: #9cabb0;
     margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .copertina {
     height:50px;
     width: 100%;
 }
 .film {
-    margin-bottom: 50px;
-    background-color: darkorange;
-    height:auto;
-    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-color:rgb(0, 102, 153);
+    min-height:340px;
+    width: 300px;
+    border-radius: 10px;
+
 }
 h3 {
-    font-size: 30px;
+    font-size: 20px;
 }
 #ot {
-    font-size: 30px;
+    font-size: 24px;
 }
-.film span {
-    display: block;
+#gen {
+    margin-bottom: 10px;
+
+}
+#lang {
+    margin-bottom: 15px;
+     display: block;
+}
+#titolo {
+    font-size: 30px;
+
+}
+.flag {
+    height: 60px;
+    margin-bottom: -20px;
+    margin-left: -5px;
+
 }

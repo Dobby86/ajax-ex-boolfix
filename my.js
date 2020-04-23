@@ -18,14 +18,14 @@ $("#cerca").click(function() {
 // listaFilm
 $.ajax({
 
-    url: "https://api.themoviedb.org/3/search/movie",
-    method: "GET",
-    dataType: "json",
-    data: {
-        api_key: "76dafb6359bcac21006df98494394fce",
-        language: "it-IT",
-        query: variabileRicerca,
-    },
+            url: "https://api.themoviedb.org/3/search/movie",
+            method: "GET",
+            dataType: "json",
+            data: {
+                api_key: "76dafb6359bcac21006df98494394fce",
+                language: "it-IT",
+                query: variabileRicerca,
+                    },
     // handlebars
     success : function (data) {
 
@@ -41,6 +41,7 @@ $.ajax({
         for (var i = 0; i < listaFilm.length; i++) {
 
             var listaCorrente = listaFilm [i];
+
             //parte simile
             var originalLan = listaCorrente.original_language;
 
@@ -50,22 +51,22 @@ $.ajax({
 
             // come lo valorizzo?
             if (originalLan == "en") {
-                valoreProprietàLinguaggio = '<img src = "img/gb.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/gb.png" >';
 
             }else if (originalLan == "it"){
-                valoreProprietàLinguaggio = '<img src = "img/it.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/it.png" >';
 
             }else if (originalLan == "es"){
-                valoreProprietàLinguaggio = '<img src = "img/es.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/es.png" >';
 
             }else if (originalLan == "de"){
-                valoreProprietàLinguaggio = '<img src = "img/de.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/de.png" >';
             }else if (originalLan == "fr"){
-                valoreProprietàLinguaggio = '<img src = "img/fr.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/fr.png" >';
             }else if (originalLan == "ja"){
-                valoreProprietàLinguaggio = '<img src = "img/jp.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/jp.png" >';
             }else if (originalLan == "sv"){
-                valoreProprietàLinguaggio = '<img src = "img/se.png" >';
+                valoreProprietàLinguaggio = '<img class="flag"  src = "img/se.png" >';
             }
              else {
                 valoreProprietàLinguaggio = originalLan;
@@ -80,8 +81,8 @@ $.ajax({
                 subtitle : listaCorrente.original_title,
                 language :valoreProprietàLinguaggio,
                 stelline : generaStelle(votoCorretto),
-                voto : votoCorretto
-
+                tipoRichiesta : "Film"
+                // voto : votoCorretto
             };
             var risultatoDaAggiungere = template(context);
             $(".film-container").append(risultatoDaAggiungere);
@@ -129,25 +130,27 @@ $.ajax({
 
             // come lo valorizzo?
             if (originalLan == "en") {
-                valoreProprietàLinguaggio = '<img src = "img/gb.png">';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/gb.png">';
             }else if (originalLan == "it"){
-                valoreProprietàLinguaggio = '<img src = "img/it.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/it.png" >';
             }else if (originalLan == "es"){
-                valoreProprietàLinguaggio = '<img src = "img/es.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/es.png" >';
             }else if (originalLan == "de"){
-                valoreProprietàLinguaggio = '<img src = "img/de.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/de.png" >';
             }else if (originalLan == "fr"){
-                valoreProprietàLinguaggio = '<img src = "img/fr.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/fr.png" >';
             }else if (originalLan == "ja"){
-                valoreProprietàLinguaggio = '<img src = "img/jp.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/jp.png" >';
             }else if (originalLan == "sv"){
-                valoreProprietàLinguaggio = '<img src = "img/se.png" >';
+                valoreProprietàLinguaggio = '<img class="flag" src = "img/se.png" >';
             }
              else {
                 valoreProprietàLinguaggio = originalLan;
             }
+
             var voto = listaCorrenteSerie.vote_average;
             var votoCorretto = Math.ceil(voto / 2);
+
 
             var context = {
 
@@ -155,7 +158,8 @@ $.ajax({
                 subtitle : listaCorrenteSerie.original_name,
                 language : valoreProprietàLinguaggio,
                 stelline : generaStelle(votoCorretto),
-                voto : votoCorretto
+                tipoRichiesta : "Tv Series"
+                // voto : votoCorretto
 
             };
 
