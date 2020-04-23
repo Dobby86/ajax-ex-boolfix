@@ -78,13 +78,23 @@ $.ajax({
             var sito = "https://image.tmdb.org/t/p/";
             var size = "w185";
             var coverFilm = sito + size + listaCorrente.backdrop_path ;
+            // parte copertine
+            var imgRotta = "https://prolococaluso.altervista.org/wp-content/uploads/2013/03/immagine-non-disponibile.gif";
+
+            var verificare = listaCorrente.backdrop_path;
+
+                 if (verificare == null) {
+                     generator = imgRotta ;
+                 } else {
+                     generator = coverFilm;
+                 }
 
             var context = {
 
                 title : listaCorrente.title,
                 subtitle : listaCorrente.original_title,
                 language :valoreProprietàLinguaggio,
-                cover : coverFilm,
+                cover : generator,
                 stelline : generaStelle(votoCorretto),
                 tipoRichiesta : "Film"
                 // voto : votoCorretto
@@ -165,7 +175,7 @@ $.ajax({
 
             // parte immagini
 
-            var imgRotta = sito + size + "/images/img/errore-404.gif";
+            var imgRotta = "https://prolococaluso.altervista.org/wp-content/uploads/2013/03/immagine-non-disponibile.gif";
             var verificare = listaCorrenteSerie.poster_path;
 
                  if (verificare == null) {
