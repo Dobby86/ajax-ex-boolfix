@@ -14,9 +14,11 @@ $(document).on('mouseenter', '.film', function() {
                     var img = elementoSelezionato.find('.copertina');
 
                     // console.log(img.attr('src'));
+
                     $(this).find(".overlay").show();
                     $(this).find(".backimg").show();
-
+                    $(this).find("h5").show();
+                    $(this).find(".titolo").show();
 
 });
 //mouse leave
@@ -103,6 +105,8 @@ $("#cerca").click(function() {
                                 var sito = "https://image.tmdb.org/t/p/";
                                 var size = "w185";
                                 var coverFilm = sito + size + listaCorrente.poster_path ;
+                                var diDietro = sito + "w300" + listaCorrente.backdrop_path;
+
 
                                 // parte copertine
                                 var imgRotta = "https://lh3.googleusercontent.com/proxy/zDQaGTu0edCNxXuCnASMhw8GxMsy_7ic-CJU16sTsYdPhz2UzJzVRkluZphOaZTM0GNve1nLc8mGBHnai7cjNxCDQ-CLWjhsRlTRxcJ1DRwjO5u8RzDl";
@@ -119,7 +123,7 @@ $("#cerca").click(function() {
 
             var context = {
 
-                         back:listaCorrente.backdrop_path,
+                        back:diDietro,
 
                         title : listaCorrente.title,
                         subtitle : listaCorrente.original_title,
@@ -225,9 +229,10 @@ $.ajax({
                         language : valoreProprietàLinguaggio,
                         stelline : generaStelle(votoCorretto),
                         cover : generator,
-                        // cover : imgSiOno(coverSerie),
+                        overview : listaCorrenteSerie.overview,
+
                         tipoRichiesta : "Tv Series"
-                        // voto : votoCorretto
+
                     };
 
             var risultatoDaAggiungere = template(context);
