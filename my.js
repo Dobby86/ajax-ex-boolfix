@@ -103,9 +103,9 @@ $("#cerca").click(function() {
                                 var votoCorretto = Math.ceil(voto / 2);
                                 // copertine
                                 var sito = "https://image.tmdb.org/t/p/";
-                                var size = "w185";
+                                var size = "w200";
                                 var coverFilm = sito + size + listaCorrente.poster_path ;
-                                var diDietro = sito + "w300" + listaCorrente.backdrop_path;
+                                var diDietro = sito + size + listaCorrente.backdrop_path;
 
 
                                 // parte copertine
@@ -121,9 +121,17 @@ $("#cerca").click(function() {
                  }
                  // cambio copertina......................................................................
 
+                             var cambioLato = listaCorrente.backdrop_path;
+
+                                         if (cambioLato == null) {
+                                      generatorDietro = imgRotta ;
+                                         } else {
+                                      generatorDietro = diDietro;
+                                  }
+
             var context = {
 
-                        back:diDietro,
+                        back: generatorDietro,
 
                         title : listaCorrente.title,
                         subtitle : listaCorrente.original_title,
@@ -205,8 +213,9 @@ $.ajax({
                             var votoCorretto = Math.ceil(voto / 2);
                             // copertine serie
                             var sito = "https://image.tmdb.org/t/p/";
-                            var size = "w185";
+                            var size = "w200";
                             var coverSerie = sito + size + listaCorrenteSerie.poster_path ;
+                            var serieDietro = sito + size + listaCorrenteSerie.backdrop_path;
 
             // test
 
@@ -220,10 +229,21 @@ $.ajax({
                              } else {
                                  generator = coverSerie;
                              }
+                             // pellicola Dietro
+                             var cambioLato = listaCorrenteSerie.backdrop_path;
+
+                                         if (cambioLato == null) {
+                                      generatorDietro = imgRotta ;
+                                         } else {
+                                      generatorDietro = serieDietro;
+                                  }
+
 
             var context = {
 
                         title : listaCorrenteSerie.name,
+                        back : generatorDietro,
+
                         subtitle : listaCorrenteSerie.original_name,
                         date : listaCorrenteSerie.first_air_date,
                         language : valoreProprietàLinguaggio,
