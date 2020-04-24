@@ -37,9 +37,14 @@ input {
 }
 h1 {
     color:#990000;
-    font-size: 55px;
+    font-size: 50px;
     margin-left: 30px;
 
+}
+#data {
+    color: #9cabb0;
+    font-size: 17px;
+    margin-top: 6px;
 }
 .separee {
     display: flex;
@@ -113,7 +118,7 @@ h3 {
 }
 #gen {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 17px;
     color: #a3cbda;
 
 }
@@ -125,7 +130,7 @@ h3 {
 
 }
 #titolo {
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     color: #a3cbda;
 

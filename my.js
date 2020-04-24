@@ -94,6 +94,7 @@ $.ajax({
 
                 title : listaCorrente.title,
                 subtitle : listaCorrente.original_title,
+                date : listaCorrente.release_date,
                 language :valoreProprietàLinguaggio,
                 cover : generator,
                 stelline : generaStelle(votoCorretto),
@@ -189,6 +190,7 @@ $.ajax({
 
                 title : listaCorrenteSerie.name,
                 subtitle : listaCorrenteSerie.original_name,
+                date : listaCorrenteSerie.first_air_date,
                 language : valoreProprietàLinguaggio,
                 stelline : generaStelle(votoCorretto),
                 cover : generator,
