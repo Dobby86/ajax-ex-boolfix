@@ -41,7 +41,7 @@ h1 {
     margin-left: 30px;
 
 }
-#data {
+.data {
     color: #9cabb0;
     font-size: 17px;
     margin-top: 6px;
@@ -57,10 +57,6 @@ h1 {
 .film-container {
     height:100vh ;
     width: 50%;
-    /* background-color: #9cabb0; */
-    /* background-image: url(https://freedesignfile.com/upload/2018/04/Hand-drawn-wave-seamless-pattern-black-with-white-vectors.jpg); */
-    /* background-size:auto; */
-    /* margin-top: 150px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,33 +67,37 @@ h1 {
 .serie-container {
     height:100vh ;
     width: 50%;
-    /* background-color: #9cabb0; */
-    /* background-image: url(https://freedesignfile.com/upload/2018/04/Hand-drawn-wave-seamless-pattern-black-with-white-vectors.jpg); */
-    /* background-size:auto; */
     margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* float: right; */
     overflow-y: scroll;
 }
 .tutto {
         background-image: url(https://images6.alphacoders.com/325/325041.jpg);
+            background-size:cover;
 }
-.copertina {
+.copertina ,.backimg {
     height:auto;
     width: auto;
     padding: 20px;
 
 }
-.film {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
+.overlay {
+    position: absolute;
+    display:none;
     background-color: rgb(36,42,54);
-    min-height: 570px;
+}
+.film  {
+    position: relative;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: rgb(36,42,54);
+    min-height: 620px;
     width: 300px;
     border-radius: 10px;
     display: flex;
@@ -106,30 +106,31 @@ h1 {
     flex-wrap: wrap;
     flex-direction: column;
     border: 2px solid #330000;
+    cursor: pointer;
 }
 h3 {
     font-size: 20px;
     color: #a3cbda;
 }
-#ot {
+.ot {
     font-size: 24px;
     color: #a3cbda;
     text-align: center;
 }
-#gen {
+.gen {
     margin-bottom: 10px;
     font-size: 17px;
     color: #a3cbda;
 
 }
-#lang {
+.lang {
     margin-bottom: 15px;
      display: inline-block;
      font-size: 20px;
      color: #a3cbda;
 
 }
-#titolo {
+.titolo {
     font-size: 25px;
     text-align: center;
     color: #a3cbda;

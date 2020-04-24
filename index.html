@@ -43,14 +43,14 @@
 
 
 
-                <div class="film-container container">
+                    <div class="film-container container">
 
 
-                </div>
-                <div class="serie-container container">
+                    </div>
+                    <div class="serie-container container">
 
 
-                </div>
+                    </div>
         </div>
 
 
@@ -58,18 +58,26 @@
 
         <div class="film" >
 
+
                     <img class="copertina" src= "{{{cover}}}" >
 
+                            <h2 class="titolo">Title :{{title}} </h2>
+                            <span class="ot">Original title :{{subtitle}}</span>
+                            <span class="data">Release:         {{date}}</span>
+                            <span class="lang"><b >Language :</b> {{{language}}}</span>
 
-                    <h2 id="titolo">Title :{{title}} </h2>
-                    <span id="ot">Original title :{{subtitle}}</span>
-                    <span id="data">Release: {{date}}</span>
-                    <span id="lang"><b >Language :</b> {{{language}}}</span>
-                    <!-- <h4>Vote : {{voto}}</h4> -->
-                    <h4 id="gen">Genre : {{tipoRichiesta}}</h4>
-                    <h5>{{{stelline}}}</h5>
+                                <h4 class="gen">Genre : {{tipoRichiesta}}</h4>
+                                <h5>{{{stelline}}}</h5>
+
+<!-- back della copertina -->
+                <div class="overlay">
+                        <img class="backimg" src= "{{{back}}}" >
+                             <span class="over"><b >{{overview}}</b>
+                </div>
+
 
         </div>
+
       </script>
             <script type="text/javascript" src="my.js">
 
