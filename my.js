@@ -79,7 +79,8 @@ $.ajax({
             var size = "w185";
             var coverFilm = sito + size + listaCorrente.poster_path ;
             // parte copertine
-            var imgRotta = "https://prolococaluso.altervista.org/wp-content/uploads/2013/03/immagine-non-disponibile.gif";
+            var imgRotta = "https://lh3.googleusercontent.com/proxy/zDQaGTu0edCNxXuCnASMhw8GxMsy_7ic-CJU16sTsYdPhz2UzJzVRkluZphOaZTM0GNve1nLc8mGBHnai7cjNxCDQ-CLWjhsRlTRxcJ1DRwjO5u8RzDl";
+
 
             var verificare = listaCorrente.poster_path;
 
@@ -174,8 +175,8 @@ $.ajax({
             // test
 
             // parte immagini
+            var imgRotta = "https://lh3.googleusercontent.com/proxy/zDQaGTu0edCNxXuCnASMhw8GxMsy_7ic-CJU16sTsYdPhz2UzJzVRkluZphOaZTM0GNve1nLc8mGBHnai7cjNxCDQ-CLWjhsRlTRxcJ1DRwjO5u8RzDl";
 
-            var imgRotta = "https://prolococaluso.altervista.org/wp-content/uploads/2013/03/immagine-non-disponibile.gif";
             var verificare = listaCorrenteSerie.poster_path;
 
                  if (verificare == null) {
@@ -230,18 +231,3 @@ function generaStelle (voto){
     }
     return stelleTot;
 }
-// parte img
-// function imgSiOno(coverSerie) {
-//
-//     var imgRotta ='<img src = "img/notfound.jpg" >';
-//     imgRotta = false;
-//     var nonTrovata = "null";
-//     var verificare = listaCorrenteSerie.backdrop_path;
-//
-//     if (verificare == nonTrovata){
-//          coverSerie = imgRotta;
-//
-//     }else {
-//          coverSerie = true;
-//     }
-// }
