@@ -77,11 +77,11 @@ $.ajax({
             // copertine
             var sito = "https://image.tmdb.org/t/p/";
             var size = "w185";
-            var coverFilm = sito + size + listaCorrente.backdrop_path ;
+            var coverFilm = sito + size + listaCorrente.poster_path ;
             // parte copertine
             var imgRotta = "https://prolococaluso.altervista.org/wp-content/uploads/2013/03/immagine-non-disponibile.gif";
 
-            var verificare = listaCorrente.backdrop_path;
+            var verificare = listaCorrente.poster_path;
 
                  if (verificare == null) {
                      generator = imgRotta ;
