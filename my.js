@@ -109,7 +109,7 @@ $("#cerca").click(function() {
 
 
                                 // parte copertine
-                                var imgRotta = "https://lh3.googleusercontent.com/proxy/zDQaGTu0edCNxXuCnASMhw8GxMsy_7ic-CJU16sTsYdPhz2UzJzVRkluZphOaZTM0GNve1nLc8mGBHnai7cjNxCDQ-CLWjhsRlTRxcJ1DRwjO5u8RzDl";
+                                var imgRotta = "https://www.kin.it/ahi/dms/IMMAGINI%20SITO/1_immaginenonpresente-1.gif?d=";
 
 
             var verificare = listaCorrente.poster_path;
@@ -220,7 +220,7 @@ $.ajax({
             // test
 
                             // parte immagini
-                            var imgRotta = "https://lh3.googleusercontent.com/proxy/zDQaGTu0edCNxXuCnASMhw8GxMsy_7ic-CJU16sTsYdPhz2UzJzVRkluZphOaZTM0GNve1nLc8mGBHnai7cjNxCDQ-CLWjhsRlTRxcJ1DRwjO5u8RzDl";
+                            var imgRotta = "https://www.kin.it/ahi/dms/IMMAGINI%20SITO/1_immaginenonpresente-1.gif?d=";
 
             var verificare = listaCorrenteSerie.poster_path;
 
