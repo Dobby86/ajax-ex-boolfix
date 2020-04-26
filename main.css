@@ -97,6 +97,16 @@ h1 {
     width: 300px;
 
 }
+
+
+.OraTotale ,.mese {
+    font-size: 17px;
+    color: #990000;
+    /* margin-top: 5px; */
+    margin-right: 50px;
+    float: right;
+    
+}
 .over{
     font-size: 17px;
     color: white;

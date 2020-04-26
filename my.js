@@ -6,7 +6,19 @@
 // Lingua
 // Voto
 $(document).ready(function() {
+    //parte time
+    var oggi = new Date();
+                var minNow = oggi.getMinutes();
+                var hourNow = oggi.getHours();
+                var oraTot = hourNow + " : " + minNow;
+                var mese =oggi.getDate() +  "/" + (oggi.getMonth() + 1) + " /"  + oggi.getFullYear();
+                console.log(oggi);
+                console.log(hourNow);
+                $(".OraTotale").text(oraTot);
+
+                $(".mese").text(mese);
 //mouse enter
+
 $(document).on('mouseenter', '.film', function() {
 
                     // console.log('sono entrato in un film!');
