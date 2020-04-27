@@ -121,7 +121,7 @@ $("#cerca").click(function() {
 
 
                                 // parte copertine
-                                var imgRotta = "https://www.kin.it/ahi/dms/IMMAGINI%20SITO/1_immaginenonpresente-1.gif?d=";
+                                var imgRotta = "https://media3.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.gif";
 
 
             var verificare = listaCorrente.poster_path;
@@ -232,7 +232,7 @@ $.ajax({
             // test
 
                             // parte immagini
-                            var imgRotta = "https://www.kin.it/ahi/dms/IMMAGINI%20SITO/1_immaginenonpresente-1.gif?d=";
+                            var imgRotta = "https://media3.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.gif";
 
             var verificare = listaCorrenteSerie.poster_path;
 
